@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>ICCARE-2025 | International Conference on Computing and Advanced Research in Engineering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <!-- Header -->
+ <header id="header">
+    <div class="header-container">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="PBR Visvodaya Logo">
+            <div class="logo-text">
+                <h1>ICCARE-2k25</h1>
+                
+            </div>
+        </div>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#slider">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#committees">Committees</a></li>
+                <li><a href="#dates">Important Dates</a></li>
+                <li><a href="#dates">Progress</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </div>
+</header>
+<br><br><br><br>
+<!-- marque -->
+<div class="marquee-container">
+    <marquee behavior="scroll" direction="left" scrollamount="8">
+        INTERNATIONAL CONFERENCE ON COMPUTING AND ADVANCED RESEARCH IN ENGINEERING (ICCARE-2025) (HYBRID MODE), JOINTLY ORGANIZED BY DEPARTMENT OF CSE, CSE-IOT, CSE-AI, AI&ML, ON <span class="date-btn" onclick="showPopup('conference')">11TH JULY 2025<span class="badge">!</span></span>
+    </marquee>
+</div>
+
+<!-- Dates Marquee -->
+<div class="marquee-container dates-marquee">
+    <marquee behavior="scroll" direction="left" scrollamount="8">
+        IMPORTANT DATES: 
+        <span class="date-btn" onclick="showPopup('submission')">30.05.2025<span class="badge">!</span></span> - Full Paper Submission | 
+        <span class="date-btn" onclick="showPopup('notification')">02.06.2025<span class="badge">!</span></span> - Acceptance Notification | 
+        <span class="date-btn" onclick="showPopup('final')">15.06.2025<span class="badge">!</span></span> - Final Paper Submission | 
+        <span class="date-btn" onclick="showPopup('conference')">11.07.2025<span class="badge">!</span></span> - Conference Date
+    </marquee>
+</div>
+
+<!-- Popup Overlay -->
+<div class="overlay" id="overlay" onclick="hidePopup()"></div>
+
+<!-- Popup Content -->
+<div class="popup" id="popup">
+    <span class="close-btn" onclick="hidePopup()">×</span>
+    <h3 id="popup-title">Important Date</h3>
+    
+    <div id="popup-content">
+        <div class="date-item">
+            <span>Date:</span>
+            <span id="popup-date" style="color: #1a237e; font-weight: bold;">--</span>
+        </div>
+        <div class="date-item">
+            <span>Event:</span>
+            <span id="popup-event" style="color: #1a237e; font-weight: bold;">--</span>
+        </div>
+    </div>
+    
+    <p style="margin-top: 20px; font-style: italic; color: #555;">Click outside this box or press ESC to close</p>
+</div>
+ <!-- marque -->
+
+
+
+<!-- slider -->
+
+    <div class="conference-slider" id="slider">
+        <div class="slider-track">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <img src="images/img1.jpg" alt="College Campus" class="slide-image">
+                <div class="slide-card">
+                    <img src="images/2025.jpg">
+                    <h2 class="slide-title">ICCARE 2025 Conference</h2>
+                    <p class="slide-text">Join us for the International Conference on Computing and Advanced Research in Engineering</p>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="images/img2.jpg" alt="Conference Hall" class="slide-image">
+                <div class="slide-card">
+                    <img src="images/2025.jpg">
+                    <h2 class="slide-title">July 11, 2025</h2>
+                    <p class="slide-text">Conference Hall, Abdul Kalam Block</p>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="images/img3.jpg" alt="CSE Department" class="slide-image">
+                <div class="slide-card">
+                    <img src="images/2025.jpg">
+                    <h2 class="slide-title">Organized by CSE Department</h2>
+                    <p class="slide-text">PBR Visvodaya Institute of Technology and Science</p>
+                </div>
+            </div>
+        </div>
+                    
+       <button class="nav-btn prev-btn">&#10094;</button>
+      <button class="nav-btn next-btn">&#10095;</button>
+    </div>
+    
+    <div class="dots-container" id="dotsContainer"></div>
+    <br>
+    
+
+ <!--slider -->
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>INTERNATIONAL CONFERENCE ON COMPUTING AND ADVANCED RESEARCH IN ENGINEERING</h1>
+        <p>Exploring the intersection of computing and engineering with other fields</p>
+        <div class="date-venue">
+            <div><i class="fas fa-calendar-alt"></i> <span>11.07.2025</span></div>
+            <div><i class="fas fa-map-marker-alt"></i> <span>Conference Hall, Abdul kalam Block</span></div>
+        </div>
+        <div class="cta-buttons">
+            <a href="#dates" class="btn btn-primary">Submit Paper</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScFc_WC1CEqb-GxWQt0tROJtMctFnc4w2-gmvJ_20nWzSVjQQ/viewform" class="btn btn-secondary">Register Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section" id="about">
+    <div class="container">
+        <div class="section-title">
+            <h2>About The Conference</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-card">
+                <div class="animated">
+                    <div>
+                <h3><i class="fas fa-university"></i>    Institution</h3>
+                <p><b>PBR Visvodaya Institute of Technology and Science</b>, an Autonomous Institution, situated in an eco-friendly environment with state-of-the-art infrastructure.</p>
+                <p><b> Dr. Doda Ramachandra Reddy established Visvodaya Society in 1952 at Kavali.</b> PBR Visvodaya Institute of Technology & Science was established under the aegis of Visvodaya Society in 1988 with an <b>initial intake of 180 students in the Undergraduate courses</b>.</p>
+               <p>the total sanctioned intake is 1710, including 1560 in UG programmes and 150 in PG programmes. The college has achieved prestigious accreditation from NBA and NAAC. The institution also received autonomous status during the academic year 2021-22</p>
+                <p>Currently offering UG Programs in:</p>
+                <ul>
+                    <b><li>Electronics and Communication Engineering</li></b>
+                    <b><li>Computer Science and Engineering (CSE-AI, CSE-IOT, AI&ML)</li></b>
+                    <b><li>Electrical and Electronics Engineering</li></b>
+                    <b><li>Mechanical Engineering</li></b>
+                    <b><li>Civil Engineering</li></b>
+                </ul>
+            </div>
+                <div class="gif-section">
+                    <div class="gif-container">
+                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHl0Y29ocmJucDdubjJhbGlyNWo2MmVwa3F1M2Rjc2I3ZDl2eTFpbyZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/Zt6pXtr8m6Kd8mpT1V/giphy.gif" alt="Computer science animation">
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div><br>
+            <div class="about-card">
+                <div class="animateddep">
+                    <div>
+                <h3><i class="fas fa-industry"></i> Departments</h3>
+                <p>The blooming field of study, <b>Department of CSE Allied Branches of CSE</b> have collaborated with Computer Science and Engineering to organize the international conference to provide a platform for the growing interdisciplinary engineering.</p>
+                <p>The CSE department is offering:</p>
+                <ul>
+                    <li><b>UG program</b> with an intake of <b>480 students</b></li>
+                    <li><b>PG program</b> with <b>18 intake</b></li>
+                </ul>
+                <p>Allied branches include:</p>
+                <ul>
+                    <li><b>CSE-AI</b> with an intake of <b>360 seats</b></li>
+                    <li><b>CSE-IoT</b> branch with an intake of <b>120 seats</b></li>
+                    <li><b>AI&ML </b>branch with an intake of <b>360 seats</b></li>
+                </ul>
+                <p>The departments are equipped with modern research tools and industry-supported laboratories (e.g., Virtusa CoE).</p>
+                </div>
+                <div class="gif-section">
+                    <div class="gif-container">
+                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWx3Ym5kam1sM2wyaTVnNXB4dm5wazBnZmwzdnYzcnpxb2Rzc3kwZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/kkCsb4kKRQOzPPDBGL/giphy.gif" alt="Computer science animation">
+                    </div>
+                </div>
+                </div>
+            </div><br>
+            <div class="about-card">
+                <div class="animated">
+                <div>
+                <h3><i class="fas fa-users"></i> The Conference</h3>
+                <p><b>The ICCARE-2025 aims to encourage interdisciplinary research and collaboration</b>, exploring the intersection of computing and engineering with other fields.</p>
+                <p>It provides a platform for researchers, academicians, and industry professionals to share their knowledge and experiences in computing and advanced research in engineering trends and latest innovations covering all the recent developments of Computer science and Engineering.</p>
+                <p>The conference will have keynote address from illustrious speakers and presentations of peer-reviewed high quality technical papers.</p>
+                <p><strong>Jointly organised by Department of CSE & Allied</strong></p>
+                </div>
+                <div class="gif-section">
+                    <div class="gif-container">
+                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGx4eTJiMm55N2E3bmN0NTFpdG5hOHR6emlkeHoweXVkMG9hYTBmdSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/q7XCMEUFegs6QDg3IT/giphy.gif" alt="Computer science animation">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Committees Section -->
+<section class="committees-section" id="committees">
+    <div class="container">
+        <div class="section-title">
+            <h2>Conference Committees</h2>
+        </div>
+        <div class="committee-tabs">
+            <button class="tab-btn active" data-tab="chief">Chief Guests</button>
+            <button class="tab-btn" data-tab="patrons">Patrons</button>
+            <button class="tab-btn" data-tab="chairs">Conference Chairs</button>
+            <button class="tab-btn" data-tab="co-chairs">Conference Co-Chairs</button>
+            <button class="tab-btn" data-tab="conveners">Conveners</button>
+            <button class="tab-btn" data-tab="co-conveners">Co-Conveners</button>
+            <button class="tab-btn" data-tab="committee">Organizing Committee</button>
+        </div>
+        <div class="committee-content active" id="chief">
+            <div class="committee-grid">
+                <div class="member-card">
+                    <h3>Dr. A.P Siva Kumar</h3>
+                    <p>Controller of examination, Professor, Dept of CSE</p>
+                    <p>JNTUA, Anantapur, Andhra Pradesh</p>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="committee-content" id="patrons">
+            <div class="committee-grid">
+                <div class="member-card">
+                    <h3>Sri. D. Vidyadhara Kumar Reddy</h3>
+                    <p>Chairman</p>
+                </div>
+                <div class="member-card">
+                    <h3>Wg. Cdr. I.P.C. Reddi</h3>
+                    <p>Director</p>
+                </div>
+                <div class="member-card">
+                    <h3>Dr. D. Prathyusha Reddi</h3>
+                    <p>Director-Academics</p>
+                </div>
+                <div class="member-card">
+                    <h3>Dr. D. Likith Reddy</h3>
+                    <p>Academic Incharge</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="committee-content" id="chairs">
+            <div class="committee-grid">
+                <div class="member-card">
+                    <h3>Dr. N.Seshaiah</h3>
+                    <p>Principal, Conference Chair</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="committee-content" id="co-chairs">
+            <div class="committee-grid">
+
+                <div class="member-card">
+                    <h3>Dr. V. V. Sunil Kumar</h3>
+                    <p>Vice-Principal, Conference Co-Chair</p>
+                </div>
+                <div class="member-card">
+                    <h3>Dr. N. Sreenadh Reddy</h3>
+                    <p>Vice-Principal, Conference Co-Chair</p>
+                </div>
+                <div class="member-card">
+                    <h3>Dr. B. Vamsee Mohan</h3>
+                    <p>Placement Director, Conference Co-Chair</p>
+                </div>
+                <div class="member-card">
+                    <h3>Dr.G Vijay Kumar</h3>
+                    <p>R&D, Conference Co-Chair</p>
+                </div>
+            </div>
+        </div>
+        <div class="committee-content" id="conveners">
+            <div class="committee-grid">
+                <div class="member-card">
+                    <h3>Dr. D. Srujan Chandra Reddy</h3>
+                    <p>HOD/CSE</p>
+                </div>
+                <div class="member-card">
+                    <h3>Prof. P. Eswaraiah</h3>
+                    <p>HOD/CSE-IOT</p>
+                </div>
+                <div class="member-card">
+                    <h3>Dr.A.Maheswara Reddy</h3>
+                    <p>HOD/CSE-AI</p>
+                </div>
+                <div class="member-card">
+                    <h3>Dr. M. Praveen Kumar</h3>
+                    <p>HOD/AI&ML</p>
+                </div>
+               
+            </div>
+        </div>
+
+        <div class="committee-content" id="co-conveners">
+            <div class="committee-grid">
+                <div class="member-card">
+                  <h3>Dr. K.V Subbaiah</h3>
+                  <p>Professor, Dept of CSE</p>
+                </div>
+                <div class="member-card">
+                 <h3>Dr. R. Kondareddy</h3>
+                 <p>Assoc Professor, Dept of CSE</p>
+                </div>
+                <div class="member-card">
+                    <h3>Dr. PVN Rajeswari</h3>
+                    <p>Assoc Professor, Dept of CSE</p>
+                </div>
+                <div class="member-card">
+                    <h3>Dr. V. Phanibhusan</h3>
+                    <p>Assoc Professor, Dept of CSE</p>
+                </div>
+
+            </div> 
+           
+        </div>
+
+        <div class="committee-content" id="committee">
+            <div class="committee-grid">
+                <div class="member-card">
+                    <h3>Ms. Guna Gayathri Praseetha k</h3>
+                </div>
+                <div class="member-card">
+                    <h3>Mr. R Prapulla Kumar</h3>
+                </div>
+                <div class="member-card">
+                    <h3>Mr. P Srinivasulu</h3>
+                </div>
+                <div class="member-card">
+                    <h3>Mr. P. Venkateswara Reddy</h3>
+                </div>
+                <div class="member-card">
+                    <h3>Ms. Sk.Jabeena</h3>
+                </div>
+                <div class="member-card">
+                    <h3>Mr.T Dayakar</h3>
+                </div>
+                <div class="member-card">
+                    <h3>Mr.J Murali</h3>
+                </div>
+                <div class="member-card">
+                    <h3>Ms. M.Tejaswini</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Important Dates Section -->
+<section class="dates-section" id="dates">
+    <div class="container">
+        <div class="section-title">
+            <h2>Important Dates</h2>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">30.05.2025</div>
+                    <div class="timeline-text">Full paper submission</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">02.06.2025</div>
+                    <div class="timeline-text">Acceptance notification</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">15.06.2025</div>
+                    <div class="timeline-text">Final Paper Submission</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">11.07.2025</div>
+                    <div class="timeline-text">Conference Date</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>Venue</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Conference Hall, Abdul kalam Block</p>
+                <p>PBR Visvodaya Institute of Technology and Science</p>
+                <p>Kavali, Andhra Pradesh</p>
+            </div>
+            <div class="about-card">
+                <h3>Contact Information</h3>
+                <p><i class="fas fa-location"></i>SPSR Nellore district. Pin: 524201</p>
+                <p><i class="fas fa-phone"></i>9095082795, 9390637937</p>
+                <p><i class="fas fa-envelope"></i>iccare2025@visvodayata.ac.in</p>
+                <p><i class="fas fa-globe"></i>www.iccare.in</p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>About ICCARE-2025</h3>
+                <p>The International Conference on Computing and Advanced Research in Engineering aims to encourage interdisciplinary research and collaboration in computing and engineering fields.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#committees">Committees</a></li>
+                    <li><a href="#dates">Important Dates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> PBR Visvodaya Institute of Technology and Science, Kavali, Andhra Pradesh</p>
+                <p><i class="fas fa-phone"></i> 9095082795, 9390637937</p>
+                <p><i class="fas fa-envelope"></i> iccare2025@visvodayata.ac.in</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ICCARE-2025 | PBR Visvodaya Institute of Technology and Science. All Rights Reserved.</p>
+            <p>APPROVED BY AICTE, AFFILIATED TO JNTUA AND ACCREDITED BY NAAC</p>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
